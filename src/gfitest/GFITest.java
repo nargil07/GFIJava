@@ -5,6 +5,7 @@
  */
 package gfitest;
 
+import gfitest.frame.LoginFrame;
 import javax.swing.JFrame;
 
 /**
@@ -17,7 +18,7 @@ public class GFITest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        JFrame frame = new PagePrincipale();
+        JFrame frame = new LoginFrame();
         frame.setVisible(true);
         
     }
