@@ -23,7 +23,7 @@ public class JDBConnection {
     private JDBConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://hostname:port/dbname", "username", "password");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/dbname", "username", "password");
         } catch (ClassNotFoundException e) {
             System.out.println("Where is your MySQL JDBC Driver?");
         } catch (SQLException ex) {
