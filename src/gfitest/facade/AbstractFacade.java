@@ -5,6 +5,10 @@
  */
 package gfitest.facade;
 
+
+import gfitest.entity.Patient;
+import gfitest.jdbc.JDBConnection;
+import java.sql.Connection;
 import java.util.List;
 
 /**
@@ -13,6 +17,14 @@ import java.util.List;
  * @param <T>
  */
 public abstract class AbstractFacade<T> {
+
+    protected final Connection connection;
+    
+    public AbstractFacade() {
+        connection = JDBConnection.getInstance().getConn();
+    }
+    
+    
     public abstract List<T> findAll();
-    public abstract List<T> findById();
+    public abstract T findById(int id);
 }

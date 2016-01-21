@@ -3,20 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gfitest.enums;
+package gfitest.service;
+
+import gfitest.entity.Patient;
 
 /**
  *
  * @author antony
  */
-public enum SexeEnum {
-    MASCULIN,
-    /**
-     * 
-     */
-    FEMININ,
-    /**
-     * 
-     */
-    AUTRE;
+public class ServicePatient extends AbstractService<Patient>{
+
+    
+    public ServicePatient(Patient entity) {
+        super(entity);
+    }
+    
 }

@@ -13,8 +13,9 @@ import java.sql.Timestamp;
  *
  * @author antony
  */
-public class Patient {
+public class Patient{
 
+    private int num_dossier;
     private String nom;
     private String prenom;
     private Timestamp dateNaissance;
@@ -27,7 +28,7 @@ public class Patient {
     private SituationFamilleEnum situationFamilleEnum;
     private String numSejour;
     private int secu;
-    private String communeNaissance;
+    private int communeNaissance;
     private String nationalite;
     private Timestamp dateDeces;
     private String email;
@@ -37,7 +38,8 @@ public class Patient {
     private String telephoneAyantDroit;
     private String mailAyantDroit;
 
-    public Patient(String nom, String prenom, Timestamp dateNaissance, SexeEnum sexe, String adresse, String ville, String codePostal, String telephoneFixe, String telephoneMobile, SituationFamilleEnum situationFamilleEnum, String numSejour, int secu, String communeNaissance, String nationalite, Timestamp dateDeces, String email, Medecin medecinGeneraliste, String nomAyantDroit, String prenomAyantDroit, String telephoneAyantDroit, String mailAyantDroit) {
+    public Patient(int num_dossier,String nom, String prenom, Timestamp dateNaissance, SexeEnum sexe, String adresse, String ville, String codePostal, String telephoneFixe, String telephoneMobile, SituationFamilleEnum situationFamilleEnum, String numSejour, int secu, int communeNaissance, String nationalite, Timestamp dateDeces, String email, Medecin medecinGeneraliste, String nomAyantDroit, String prenomAyantDroit, String telephoneAyantDroit, String mailAyantDroit) {
+        this.num_dossier = num_dossier;
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
@@ -61,6 +63,14 @@ public class Patient {
         this.mailAyantDroit = mailAyantDroit;
     }
 
+    public int getNum_dossier() {
+        return num_dossier;
+    }
+
+    public void setNum_dossier(int num_dossier) {
+        this.num_dossier = num_dossier;
+    }
+    
     public String getTelephoneFixe() {
         return telephoneFixe;
     }
@@ -208,11 +218,11 @@ public class Patient {
         this.secu = secu;
     }
 
-    public String getCommuneNaissance() {
+    public int getCommuneNaissance() {
         return communeNaissance;
     }
 
-    public void setCommuneNaissance(String communeNaissance) {
+    public void setCommuneNaissance(int communeNaissance) {
         this.communeNaissance = communeNaissance;
     }
 
@@ -231,4 +241,11 @@ public class Patient {
     public void setDateDeces(Timestamp dateDeces) {
         this.dateDeces = dateDeces;
     }
+
+    @Override
+    public String toString() {
+        return "Patient{" + "num_dossier=" + num_dossier + ", nom=" + nom + ", prenom=" + prenom + ", dateNaissance=" + dateNaissance + ", sexe=" + sexe + ", adresse=" + adresse + ", ville=" + ville + ", codePostal=" + codePostal + ", telephoneFixe=" + telephoneFixe + ", telephoneMobile=" + telephoneMobile + ", situationFamilleEnum=" + situationFamilleEnum + ", numSejour=" + numSejour + ", secu=" + secu + ", communeNaissance=" + communeNaissance + ", nationalite=" + nationalite + ", dateDeces=" + dateDeces + ", email=" + email + ", medecinGeneraliste=" + medecinGeneraliste + ", nomAyantDroit=" + nomAyantDroit + ", prenomAyantDroit=" + prenomAyantDroit + ", telephoneAyantDroit=" + telephoneAyantDroit + ", mailAyantDroit=" + mailAyantDroit + '}';
+    }
+    
+    
 }
