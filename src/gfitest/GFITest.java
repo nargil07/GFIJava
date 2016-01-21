@@ -14,7 +14,6 @@ import javax.swing.JFrame;
  */
 public class GFITest {
 
-    
     /**
      * @param args the command line arguments
      */
