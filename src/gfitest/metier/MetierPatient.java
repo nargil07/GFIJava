@@ -6,6 +6,8 @@
 package gfitest.metier;
 
 import gfitest.entity.Patient;
+import gfitest.facade.PatientFacade;
+import java.util.List;
 
 /**
  *
@@ -13,9 +15,15 @@ import gfitest.entity.Patient;
  */
 public class MetierPatient extends AbstractMetier<Patient>{
 
+    protected final PatientFacade patientFacade = new PatientFacade();
+    
     @Override
-    public String getId(Patient entity) {
+    protected String getId(Patient entity) {
         return String.valueOf(entity.getNum_dossier());
     }
     
+    public List<Patient> getAll(){
+        setListEntities(patientFacade.findAll());
+        return getList();
+    }
 }

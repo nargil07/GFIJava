@@ -20,47 +20,28 @@ public class Patient{
     private String prenom;
     private Timestamp dateNaissance;
     private SexeEnum sexe;
-    private String adresse;
-    private String ville;
-    private String codePostal;
-    private String telephoneFixe;
-    private String telephoneMobile;
     private SituationFamilleEnum situationFamilleEnum;
     private String numSejour;
     private int secu;
     private int communeNaissance;
     private String nationalite;
     private Timestamp dateDeces;
-    private String email;
-    private Medecin medecinGeneraliste;
-    private String nomAyantDroit;
-    private String prenomAyantDroit;
-    private String telephoneAyantDroit;
-    private String mailAyantDroit;
 
-    public Patient(int num_dossier,String nom, String prenom, Timestamp dateNaissance, SexeEnum sexe, String adresse, String ville, String codePostal, String telephoneFixe, String telephoneMobile, SituationFamilleEnum situationFamilleEnum, String numSejour, int secu, int communeNaissance, String nationalite, Timestamp dateDeces, String email, Medecin medecinGeneraliste, String nomAyantDroit, String prenomAyantDroit, String telephoneAyantDroit, String mailAyantDroit) {
+    public Patient() {
+    }
+
+    public Patient(int num_dossier, String nom, String prenom, Timestamp dateNaissance, SexeEnum sexe, SituationFamilleEnum situationFamilleEnum, String numSejour, int secu, int communeNaissance, String nationalite, Timestamp dateDeces) {
         this.num_dossier = num_dossier;
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
         this.sexe = sexe;
-        this.adresse = adresse;
-        this.ville = ville;
-        this.codePostal = codePostal;
-        this.telephoneFixe = telephoneFixe;
-        this.telephoneMobile = telephoneMobile;
         this.situationFamilleEnum = situationFamilleEnum;
         this.numSejour = numSejour;
         this.secu = secu;
         this.communeNaissance = communeNaissance;
         this.nationalite = nationalite;
         this.dateDeces = dateDeces;
-        this.email = email;
-        this.medecinGeneraliste = medecinGeneraliste;
-        this.nomAyantDroit = nomAyantDroit;
-        this.prenomAyantDroit = prenomAyantDroit;
-        this.telephoneAyantDroit = telephoneAyantDroit;
-        this.mailAyantDroit = mailAyantDroit;
     }
 
     public int getNum_dossier() {
@@ -69,73 +50,6 @@ public class Patient{
 
     public void setNum_dossier(int num_dossier) {
         this.num_dossier = num_dossier;
-    }
-    
-    public String getTelephoneFixe() {
-        return telephoneFixe;
-    }
-
-    public void setTelephoneFixe(String telephoneFixe) {
-        this.telephoneFixe = telephoneFixe;
-    }
-
-    public String getTelephoneMobile() {
-        return telephoneMobile;
-    }
-
-    public void setTelephoneMobile(String telephoneMobile) {
-        this.telephoneMobile = telephoneMobile;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Medecin getMedecinGeneraliste() {
-        return medecinGeneraliste;
-    }
-
-    public void setMedecinGeneraliste(Medecin medecinGeneraliste) {
-        this.medecinGeneraliste = medecinGeneraliste;
-    }
-
-    public String getNomAyantDroit() {
-        return nomAyantDroit;
-    }
-
-    public void setNomAyantDroit(String nomAyantDroit) {
-        this.nomAyantDroit = nomAyantDroit;
-    }
-
-    public String getPrenomAyantDroit() {
-        return prenomAyantDroit;
-    }
-
-    public void setPrenomAyantDroit(String prenomAyantDroit) {
-        this.prenomAyantDroit = prenomAyantDroit;
-    }
-
-    public String getTelephoneAyantDroit() {
-        return telephoneAyantDroit;
-    }
-
-    public void setTelephoneAyantDroit(String telephoneAyantDroit) {
-        this.telephoneAyantDroit = telephoneAyantDroit;
-    }
-
-    public String getMailAyantDroit() {
-        return mailAyantDroit;
-    }
-
-    public void setMailAyantDroit(String mailAyantDroit) {
-        this.mailAyantDroit = mailAyantDroit;
-    }
-
-    public Patient() {
     }
 
     public String getNom() {
@@ -168,30 +82,6 @@ public class Patient{
 
     public void setSexe(SexeEnum sexe) {
         this.sexe = sexe;
-    }
-
-    public String getAdresse() {
-        return adresse;
-    }
-
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
-
-    public String getVille() {
-        return ville;
-    }
-
-    public void setVille(String ville) {
-        this.ville = ville;
-    }
-
-    public String getCodePostal() {
-        return codePostal;
-    }
-
-    public void setCodePostal(String codePostal) {
-        this.codePostal = codePostal;
     }
 
     public SituationFamilleEnum getSituationFamilleEnum() {
@@ -244,8 +134,6 @@ public class Patient{
 
     @Override
     public String toString() {
-        return "Patient{" + "num_dossier=" + num_dossier + ", nom=" + nom + ", prenom=" + prenom + ", dateNaissance=" + dateNaissance + ", sexe=" + sexe + ", adresse=" + adresse + ", ville=" + ville + ", codePostal=" + codePostal + ", telephoneFixe=" + telephoneFixe + ", telephoneMobile=" + telephoneMobile + ", situationFamilleEnum=" + situationFamilleEnum + ", numSejour=" + numSejour + ", secu=" + secu + ", communeNaissance=" + communeNaissance + ", nationalite=" + nationalite + ", dateDeces=" + dateDeces + ", email=" + email + ", medecinGeneraliste=" + medecinGeneraliste + ", nomAyantDroit=" + nomAyantDroit + ", prenomAyantDroit=" + prenomAyantDroit + ", telephoneAyantDroit=" + telephoneAyantDroit + ", mailAyantDroit=" + mailAyantDroit + '}';
+        return "Patient{" + "num_dossier=" + num_dossier + ", nom=" + nom + ", prenom=" + prenom + ", dateNaissance=" + dateNaissance + ", sexe=" + sexe + ", situationFamilleEnum=" + situationFamilleEnum + ", numSejour=" + numSejour + ", secu=" + secu + ", communeNaissance=" + communeNaissance + ", nationalite=" + nationalite + ", dateDeces=" + dateDeces + '}';
     }
-    
-    
 }

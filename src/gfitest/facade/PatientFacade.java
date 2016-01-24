@@ -27,9 +27,9 @@ public class PatientFacade extends AbstractFacade<Patient> {
         List<Patient> list = new ArrayList<>();
         try {
             PreparedStatement stmt = connection.prepareStatement(""
-                    + "SELECT `num_dossier`,`nom`,`prenom`,`tel`,`email`,"
+                    + "SELECT `num_dossier`,`nom`,`prenom`,"
                     + "`dateDeNaissance`,`sexe`,`situationFamiliale`,`numSejour`,"
-                    + "`numSecu`,`lieuDeNaissance`,`nationalite`,`adresseID` "
+                    + "`numSecu`,`lieuDeNaissance`,`nationalite` "
                     + "FROM `patient`");
             ResultSet resultSet = stmt.executeQuery();
             while (resultSet.next()) {
@@ -47,9 +47,9 @@ public class PatientFacade extends AbstractFacade<Patient> {
         Patient patient = null;
         try {
             PreparedStatement stmt = connection.prepareStatement(""
-                    + "SELECT `num_dossier`,`nom`,`prenom`,`tel`,`email`,"
+                    + "SELECT `num_dossier`,`nom`,`prenom`,"
                     + "`dateDeNaissance`,`sexe`,`situationFamiliale`,`numSejour`,"
-                    + "`numSecu`,`lieuDeNaissance`,`nationalite`,`adresseID` "
+                    + "`numSecu`,`lieuDeNaissance`,`nationalite` "
                     + "FROM `patient` "
                     + "WHERE num_dossier = ?");
             stmt.setInt(1, id);
@@ -72,8 +72,6 @@ public class PatientFacade extends AbstractFacade<Patient> {
             patient.setNum_dossier(resultSet.getInt("num_dossier"));
             patient.setNom(resultSet.getString("nom"));
             patient.setPrenom(resultSet.getString("prenom"));
-            patient.setTelephoneFixe(resultSet.getString("tel"));
-            patient.setEmail(resultSet.getString("email"));
             patient.setDateNaissance(resultSet.getTimestamp("dateDeNaissance"));
             patient.setSexe(SexeEnum.values()[resultSet.getInt("sexe")]);
             patient.setSituationFamilleEnum(SituationFamilleEnum.values()[resultSet.getInt("situationFamiliale")]);

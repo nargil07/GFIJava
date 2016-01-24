@@ -18,7 +18,7 @@ public abstract class AbstractMetier<T> {
     
     protected Map<String, T> entityMap;
     
-    public abstract String getId(T entity);
+    protected abstract String getId(T entity);
     
     public void addEntity(T entity){
         if(search(getId(entity))==null){
