@@ -22,7 +22,7 @@ public class Patient{
     private SexeEnum sexe;
     private SituationFamilleEnum situationFamilleEnum;
     private String numSejour;
-    private int secu;
+    private String secu;
     private int communeNaissance;
     private String nationalite;
     private Timestamp dateDeces;
@@ -30,7 +30,7 @@ public class Patient{
     public Patient() {
     }
 
-    public Patient(int num_dossier, String nom, String prenom, Timestamp dateNaissance, SexeEnum sexe, SituationFamilleEnum situationFamilleEnum, String numSejour, int secu, int communeNaissance, String nationalite, Timestamp dateDeces) {
+    public Patient(int num_dossier, String nom, String prenom, Timestamp dateNaissance, SexeEnum sexe, SituationFamilleEnum situationFamilleEnum, String numSejour, String secu, int communeNaissance, String nationalite, Timestamp dateDeces) {
         this.num_dossier = num_dossier;
         this.nom = nom;
         this.prenom = prenom;
@@ -100,11 +100,11 @@ public class Patient{
         this.numSejour = numSejour;
     }
 
-    public int getSecu() {
+    public String getSecu() {
         return secu;
     }
 
-    public void setSecu(int secu) {
+    public void setSecu(String secu) {
         this.secu = secu;
     }
 

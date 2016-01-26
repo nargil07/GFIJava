@@ -96,6 +96,11 @@ public class Adresse {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return "Adresse{" + "id_adresse=" + id_adresse + ", adresse=" + adresse + ", codePostal=" + codePostal + ", ville=" + ville + ", pays=" + pays + ", tel_mobile=" + tel_mobile + ", tel_fixe=" + tel_fixe + ", email=" + email + '}';
+    }
     
     
 }

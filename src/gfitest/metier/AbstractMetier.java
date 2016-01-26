@@ -7,6 +7,7 @@ package gfitest.metier;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,6 +18,10 @@ import java.util.Map;
 public abstract class AbstractMetier<T> {
     
     protected Map<String, T> entityMap;
+
+    public AbstractMetier() {
+        entityMap = new HashMap<>();
+    }
     
     protected abstract String getId(T entity);
     
@@ -37,8 +42,7 @@ public abstract class AbstractMetier<T> {
         addEntities(entities);
     }
     
-    protected T search(String id)
-    {
+    protected T search(String id){
         return entityMap.get(id);
     }
     

@@ -9,6 +9,7 @@ package gfitest.facade;
 import gfitest.entity.Patient;
 import gfitest.jdbc.JDBConnection;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.util.List;
 
 /**
@@ -27,4 +28,6 @@ public abstract class AbstractFacade<T> {
     
     public abstract List<T> findAll();
     public abstract T findById(int id);
+    
+    protected abstract T convertResultSet(ResultSet resultSet);
 }

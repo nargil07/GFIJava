@@ -6,6 +6,10 @@
 package gfitest.service;
 
 import gfitest.entity.Patient;
+import gfitest.metier.coordonnees.MetierAdressePatient;
+import gfitest.metier.examen.MetierExamenPatient;
+import gfitest.metier.intervention.MetierInterventionPatient;
+import java.util.Arrays;
 
 /**
  *
@@ -13,9 +17,26 @@ import gfitest.entity.Patient;
  */
 public class ServicePatient extends AbstractService<Patient>{
 
+    private final MetierExamenPatient examenPatient;
+    private final MetierInterventionPatient interventionPatient;
+    private final MetierAdressePatient adressePatient;
     
     public ServicePatient(Patient entity) {
         super(entity);
+        examenPatient = new MetierExamenPatient(entity);
+        interventionPatient = new MetierInterventionPatient(entity);
+        adressePatient = new MetierAdressePatient(entity);
     }
+
+    @Override
+    public String toString() {
+        return "ServicePatient{\n"
+                + getEntity().toString()+ "\n"
+                + Arrays.toString(examenPatient.getList().toArray()) + "\n"
+                + Arrays.toString(interventionPatient.getList().toArray()) + "\n"
+                + Arrays.toString(adressePatient.getList().toArray()) + "\n"
+                + '}';
+    }
+    
     
 }

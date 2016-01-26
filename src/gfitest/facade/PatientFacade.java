@@ -27,15 +27,14 @@ public class PatientFacade extends AbstractFacade<Patient> {
         List<Patient> list = new ArrayList<>();
         try {
             PreparedStatement stmt = connection.prepareStatement(""
-                    + "SELECT `num_dossier`,`nom`,`prenom`,"
-                    + "`dateDeNaissance`,`sexe`,`situationFamiliale`,`numSejour`,"
-                    + "`numSecu`,`lieuDeNaissance`,`nationalite` "
-                    + "FROM `patient`");
+                    + "SELECT `num_dossier`, `nom`, `prenom`, `dateNaissance`, "
+                    + "`sexe`, `num_sejour`, `secu`, `lieuDeNaissance`, `nationalite`, "
+                    + "`dateDeces`, `situationFamiliale` FROM `patient`");
             ResultSet resultSet = stmt.executeQuery();
             while (resultSet.next()) {
                 list.add(convertResultSet(resultSet));
             }
-
+            resultSet.close();
         } catch (SQLException ex) {
             System.err.println("ERREUR à la récupération des patients");
         }
@@ -58,27 +57,28 @@ public class PatientFacade extends AbstractFacade<Patient> {
             if(resultSet.first()){
                 patient = convertResultSet(resultSet);
             }
-            
-
+            resultSet.close();
         } catch (SQLException ex) {
-            System.err.println("ERREUR à la récupération des patients : " + ex.getMessage());
+            System.err.println("ERREUR à la récupération du patient : " + ex.getMessage());
         }
         return patient;
     }
 
-    private Patient convertResultSet(ResultSet resultSet) {
+    @Override
+    protected Patient convertResultSet(ResultSet resultSet) {
         try {
             Patient patient = new Patient();
             patient.setNum_dossier(resultSet.getInt("num_dossier"));
             patient.setNom(resultSet.getString("nom"));
             patient.setPrenom(resultSet.getString("prenom"));
-            patient.setDateNaissance(resultSet.getTimestamp("dateDeNaissance"));
+            patient.setDateNaissance(resultSet.getTimestamp("dateNaissance"));
             patient.setSexe(SexeEnum.values()[resultSet.getInt("sexe")]);
             patient.setSituationFamilleEnum(SituationFamilleEnum.values()[resultSet.getInt("situationFamiliale")]);
-            patient.setNumSejour(resultSet.getString("numSejour"));
-            patient.setSecu(resultSet.getInt("numSecu"));
+            patient.setNumSejour(resultSet.getString("num_sejour"));
+            patient.setSecu(resultSet.getString("secu"));
             patient.setCommuneNaissance(resultSet.getInt("lieuDeNaissance"));
             patient.setNationalite(resultSet.getString("nationalite"));
+            patient.setDateDeces(resultSet.getTimestamp("dateDeces"));
             return patient;
         } catch (SQLException ex) {
             Logger.getLogger(PatientFacade.class.getName()).log(Level.SEVERE, null, ex);
