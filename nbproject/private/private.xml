@@ -3,18 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/entity/Patient.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/GFITest.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/facade/PatientFacade.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/service/ServiceMedecin.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/metier/MetierPatient.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/entity/Medecin.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/facade/AbstractFacade.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/metier/MetierAdressePatient.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/facade/MedecinFacade.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/metier/MetierAdresse.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/metier/MetierMedecin.java</file>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/service/AbstractService.java</file>
+            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/frame/MainFrame.java</file>
         </group>
     </open-files>
 </project-private>

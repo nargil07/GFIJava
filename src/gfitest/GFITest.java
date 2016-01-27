@@ -27,13 +27,6 @@ public class GFITest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        MetierMedecin metierMedecin = new MetierMedecin();
-        ServiceMedecin serviceMedecin = new ServiceMedecin(metierMedecin.getAll().get(0));
-        ServicePatient servicePatient = new ServicePatient(serviceMedecin.getMetierPatientMedecin().getList().get(0));
-        System.out.println(serviceMedecin.getEntity());
-        System.out.println(Arrays.toString(serviceMedecin.getMetierPatientMedecin().getAll().toArray()));
-        System.out.println(servicePatient.toString());
         JFrame frame = new LoginFrame();
         frame.setVisible(true);
         

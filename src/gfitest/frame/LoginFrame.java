@@ -107,7 +107,9 @@ public class LoginFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void connectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_connectButtonActionPerformed
-        // TODO add your handling code here:
+        MainFrame mainFrame = new MainFrame();
+        this.setVisible(false);
+        mainFrame.setVisible(true);
     }//GEN-LAST:event_connectButtonActionPerformed
 
     private void loginFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginFieldActionPerformed
