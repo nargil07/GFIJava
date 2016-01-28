@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Antony/Documents/NetbeansProject/GFIJava/src/gfitest/frame/MainFrame.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/facade/AdresseFacade.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/frame/PatientCellRendered.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/frame/MainFrame.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/facade/MedecinFacade.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/metier/coordonnees/MetierAdressePatient.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/service/ServiceMedecin.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/service/ServicePatient.java</file>
         </group>
     </open-files>
 </project-private>

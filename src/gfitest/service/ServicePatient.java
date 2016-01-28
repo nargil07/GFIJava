@@ -28,6 +28,20 @@ public class ServicePatient extends AbstractService<Patient>{
         adressePatient = new MetierAdressePatient(entity);
     }
 
+    public MetierExamenPatient getExamenPatient() {
+        return examenPatient;
+    }
+
+    public MetierInterventionPatient getInterventionPatient() {
+        return interventionPatient;
+    }
+
+    public MetierAdressePatient getAdressePatient() {
+        return adressePatient;
+    }
+
+    
+    
     @Override
     public String toString() {
         return "ServicePatient{\n"

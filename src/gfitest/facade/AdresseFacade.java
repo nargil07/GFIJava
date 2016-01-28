@@ -42,6 +42,25 @@ public class AdresseFacade extends AbstractFacade<Adresse>{
     public Adresse findById(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    public List<Adresse> findByIdPatient(int id_patient){
+         List<Adresse>list = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(""
+                    + "SELECT `id`, `adresse`, `codepostal`, `ville`, `pays`, `tel_mobile`, `tel_fixe`, `email` "
+                    + "FROM `adresse` "
+                    + "WHERE id_patient = ?");
+            preparedStatement.setInt(1, id_patient);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                list.add(convertResultSet(resultSet));
+            }
+            resultSet.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(AdresseFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    }
 
     @Override
     protected Adresse convertResultSet(ResultSet resultSet) {

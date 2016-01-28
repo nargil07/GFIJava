@@ -6,6 +6,7 @@
 package gfitest.frame;
 
 import gfitest.entity.Patient;
+import java.awt.Color;
 import java.awt.Component;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -19,7 +20,12 @@ public class PatientCellRendered implements ListCellRenderer<Patient>{
 
     @Override
     public Component getListCellRendererComponent(JList<? extends Patient> list, Patient value, int index, boolean isSelected, boolean cellHasFocus) {
-        return new JLabel(value.getNom() + " " + value.getPrenom());
+        JLabel jlabel = new JLabel(value.getNom() + " " + value.getPrenom());
+        if(isSelected){
+            jlabel.setBackground(Color.gray);
+            jlabel.setOpaque(true);
+        }
+        return jlabel;
     }
     
     

@@ -18,6 +18,6 @@ public class MetierAdressePatient extends MetierAdresse{
     
     public MetierAdressePatient(Patient patient) {
         this.patient = patient;
-        setListEntities(adresseFacade.findAll());
+        setListEntities(adresseFacade.findByIdPatient(patient.getNum_dossier()));
     }
 }
