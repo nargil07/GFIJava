@@ -7,8 +7,12 @@
             <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/frame/PatientCellRendered.java</file>
             <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/frame/MainFrame.java</file>
             <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/facade/MedecinFacade.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/frame/InterventionListCellRendered.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/metier/MetierPatientMedecin.java</file>
             <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/metier/coordonnees/MetierAdressePatient.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/metier/MetierMedecin.java</file>
             <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/service/ServiceMedecin.java</file>
+            <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/facade/AbstractFacade.java</file>
             <file>file:/C:/Users/antony/Documents/projet%20java%20iut/GFIJava/src/gfitest/service/ServicePatient.java</file>
         </group>
     </open-files>
